@@ -193,26 +193,35 @@ transform: rotate(150deg);
   border-radius: 30px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
-.second{
+.first{
 top: 0;
 left: 0;
+transform: rotate(0);
+transition: transform 500ms, top 500ms 500ms;
 }
-.last{
+.second {
+  opacity:1;
+  transition:opacity 500ms 300ms;
+}
+.third{
 bottom: 0;
 left: 0;
+transform: rotate(0);
+transition: transform 500ms, bottom 500ms 500ms;
 }
 .hamburger:hover{
   .first{
-    display: none;
-  }
-  .second{
-    top: 20px;
-    transition: all 1s;
+    top: 21px;
+    transition: top 500ms, transform 500ms 500ms;
     transform: rotate(-45deg);
   }
-  .last{
-    bottom: 20px;
-    transition: all 1s;
+  .second{
+    opacity: 0;
+    transition:opacity 500ms 0s;
+  }
+  .third{
+    bottom: 21px;
+    transition: bottom 500ms , transform 500ms 500ms;
     transform: rotate(45deg);
   }
 }
