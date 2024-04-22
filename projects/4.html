@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project__style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+    <div class="blog">
+     <div class="color__overlay">
+      <section class="calculator__section">
+      <fieldset>
+        <legend>CALCULATOR</legend>
+        <form name="CALCULATOR">
+      <input class="text__input" type="text" name="display" readonly> 
+      <br>
+      <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'"> 
+      <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'"> 
+      <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'"> 
+      <input class="button math__buttons" type="button" value="+" onclick="calculator.display.value += '+'">
+      <br> 
+      <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'"> 
+      <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'"> 
+      <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'"> 
+      <input class="button math__buttons" type="button" value="-" onclick="calculator.display.value += '-'"> 
+      <br>
+      <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'"> 
+      <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'"> 
+      <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'"> 
+      <input class="button math__buttons" type="button" value="x" onclick="calculator.display.value += 'x'">
+      <br> 
+      <input class="button clear__button" type="button" value="C" onclick="calculator.display.value = ''"> 
+      <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'"> 
+      <input class="button math__buttons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)"> 
+      <input class="button math__buttons" type="button" value="/" onclick="calculator.display.value += '/'"> 
+    </form>
+      </fieldset>
+    </section>
+        <div class="page__transition__previous"><a class="transition__a" href="3.html">Previous</a></div>
+        <div class="page__transition__next"><a class="transition__a" href="5.html">Next</a></div>
+     </div>
+    </div>
+</div>
+</body>
+</html>
