@@ -569,20 +569,80 @@ background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 0 50px 0 50px;
+}
+.login> a{
+  text-decoration: none;
+  color: #a6a6a6;
 }
 .login__input{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: auto;
+  width: 100%;
   height: auto;
   box-sizing: border-box;
+  gap: 40px;
+}
+.login__input input{
   border: none;
-  border-bottom: 1px solid #e2dede;
+  border-bottom: 2px solid #e2dede;
   padding-bottom: 1px;
+  border-radius: 2px;
+  padding: 10px;
+}
+.login__input input:focus{
+  outline: none;
+  border-bottom: 2px solid #3b5998;
+}
+.login__input__1:focus ~ .login__input__label{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.login__input__2:focus ~ .login__input__label__2{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.login__input__label{
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.login__input__label__2{
+  position: absolute;
+  bottom:10px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.login__button{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #a6a6a6;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.login__button:hover {
+  background-color: #2691d9;
+  color: #e9f4fb;
+}
+.login__label{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #a6a6a6; 
   gap: 10px;
+}
+.login__label a{
+  color: #3b5998;
+  text-decoration: none;
 }
 /*5.html end*/
 /*6.html start*/
@@ -599,8 +659,9 @@ background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 30px;
+  margin-top: 10px;
+  padding: 0 50px 0 50px;
 }
 .register__input{
   display: flex;
@@ -609,25 +670,131 @@ background: white;
   width: auto;
   height: auto;
   box-sizing: border-box;
+  gap: 20px;
+}
+.register__input input{
   border: none;
-  border-bottom: 1px solid #e2dede;
+  border-bottom: 2px solid #e2dede;
   padding-bottom: 1px;
+  border-radius: 2px;
+  padding: 10px;
+}
+.register__label__1{
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.register__label__2{
+  position: absolute;
+  bottom: 125px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.register__label__3{
+  position: absolute;
+  bottom: 67px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.register__label__4{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #a6a6a6;
+}
+.register__input input:focus{
+  outline: none;
+  border-bottom: 2px solid #3b5998;
+}
+.register__input__1:focus ~ .register__label__1{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.register__input__2:focus ~ .register__label__2{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.register__input__3:focus ~ .register__label__3{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.register__input__4:focus ~ .register__label__4{
+  transform: translateY(-20px);
+  transition: all 500ms;
+  color: #1363b9;
+}
+.register__button{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #a6a6a6;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.register__button:hover {
+  background-color: #2691d9;
+  color: #e9f4fb;
+}
+.register__label{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #a6a6a6; 
   gap: 10px;
+}
+.register__label a{
+  color: #3b5998;
+  text-decoration: none;
 }
 /*6.html end*/
 /*7.html start*/
 .page__app__1__5{
   width: auto;
   height: 100%;
-  background: purple;
+  background: #755e88;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
 .search__input{
-  display: none;
+  transform: scaleX(0);
+}
+.search__btn{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 3px solid black;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.search__btn span {
+	display: inline-block;
+	overflow: hidden;
+}
+.search__btn span{
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  background: black;
+  transform: rotate(132deg);
+  top: 18px;
+  left: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search__btn:focus + .search__input{
+  transform: scaleX(1);
 }
 /*7.html end*/
